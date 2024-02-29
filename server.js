@@ -18,14 +18,14 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-// app.use(
-// 	cors({
-// 		origin: "http://localhost:5000",
-// 		methods: "GET,POST,PUT,DELETE",
-// 		credentials: true,
-// 	})
-// );
-app.use(cors());
+app.use(
+	cors({
+		origin: "http://localhost:3000",
+		methods: "GET,POST,PUT,DELETE",
+		credentials: true,
+	})
+);
+// app.use(cors());
 app.use("/auth", authRoute);
 
 const port = process.env.PORT || 5000;

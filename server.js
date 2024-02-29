@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const passport = require("passport");
 const authRoute = require("./routes/auth");
+
 const cookieSession = require("cookie-session");
 const passportStrategy = require("./passport");
 const app = express();
@@ -14,6 +15,8 @@ app.use(
 		maxAge: 24 * 60 * 60 * 100,
 	})
 );
+
+
 
 app.use(passport.initialize());
 app.use(passport.session());

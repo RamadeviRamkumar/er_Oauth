@@ -26,7 +26,6 @@ app.use(passport.session());
 // 	})
 // );
 app.use(cors());
-api.get("/",(req,res)=>res.send("API working..."))
 app.use("/auth", authRoute);
 
 const port = process.env.PORT || 5000;
